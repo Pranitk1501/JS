@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Information Form</title>
+<style type="text/css">
+body {
+font-family: Calibri;
+}
+input[type="text"] {
+width: 250px;
+}
+input[type="submit"],
+input[type="reset"] {
+width: 77px;
+height: 27px;
+position: relative;
+left: 180px;
+}
+form {
+text-align: center;
+font-family: Calibri;
+font-size: 20px;
+border: 3px solid black;
+width: 600px;
+margin: 20px auto;
+}
+td {
+padding: 10px;
+}
+td:first-child {
+text-align: right;
+font-weight: bold;
+}
+td:last-child {
+text-align: left;
+}
+.error {
+color: red;
+}
+</style>
+</head>
+<body style="background-color: rgb(254, 255, 255)">
+    <center><h1>Student Information Form</h1></center>
+<hr />
+<form id="studentForm" onsubmit="return validateForm()">
+<table>
+<tr>
+<td>Name:</td>
+<td><input type="text" id="name" name="name" /></td>
+<td class="error" id="nameError"></td>
+</tr>
+<tr>
+<td>Address:</td>
+<td><input type="text" id="address" name="address" /></td>
+<td class="error" id="addressError"></td>
+</tr>
+<tr>
+<td>City:</td>
+<td><input type="text" id="city" name="city" /></td>
+<td class="error" id="cityError"></td>
+</tr>
+<tr>
+<td>State:</td>
+<td><input type="text" id="state" name="state" /></td>
+<td class="error" id="stateError"></td>
+</tr>
+<tr>
+<td>Gender:</td>
+<td>
+<select id="gender" name="gender">
+<option value="male">Male</option>
+<option value="female">Female</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Mobile Number:</td>
+<td><input type="text" id="mobile" name="mobile" /></td>
+<td class="error" id="mobileError"></td>
+</tr>
+<tr>
+<td>Email ID:</td>
+<td><input type="text" id="email" name="email" /></td>
+<td class="error" id="emailError"></td>
+</tr>
+<tr>
+<td>Course:</td>
+<td>
+<select name="course">
+<option value="HTML">HTML</option>
+<option value="CSS">CSS</option>
+<option value="JavaScript">JAVASCRIPT</option>
+<option value="Java">JAVA</option></select
+><br />
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<input type="submit" value="Submit" />
+<input type="reset" value="Reset" />
+</td>
+</tr>
+</table>
+</form>
+<div id="welcomeMessage" style="display: none;">
+<h2>Congratulations!</h2>
+<p>Welcome, <span id="welcomeName"></span>! Your information has been successfully
+submitted.</p>
+<button onclick="goBack()">Back</button>
+</div>
+<script src="assignment_9.js">
+</script>
+</body>
+</html>
