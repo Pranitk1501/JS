@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment 6</title>
+  </head>
+  <body id="body" style="text-align: center">
+    <h4>Pranit Kothawade 42455</h4>
+    
+    <hr />
+    <h3>Enter the Array</h3>
+    Enter the length of the array:
+    <input id="arrlen" placeholder="Array Length" />
+    <br /><br />
+
+    Enter an Element and click add element:
+    <input id="arrEle" placeholder="Array Element" />
+    <br /><br />
+    <button id="AddElement" onclick="AddElement()">Add Element</button>
+    <br /><br />
+    The Array is now: <b>[<span id="ArrOut">Empty Array</span>]</b> <br /><br />
+    <hr />
+    <h3>Array searching operations</h3>
+    <h4>Using User-defined Logic</h4>
+    Enter the element to search:
+    <input id="searchEle1" placeholder="Element to Search" />
+    <br /><br />
+    <button id="SearchEleBut1" onclick="SearchElement1()">
+      Search Element
+    </button>
+    <br /><br />
+    The Element is at the index: <b><span id="SearchOut1"></span></b>
+    <br /><br />
+    <h4>Using In-built Logic</h4>
+    Enter the element to search:
+    <input id="searchEle2" placeholder="Element to Search" />
+    <br /><br />
+
+    <button id="SearchEleBut2" onclick="SearchElement2()">
+      Search Element
+    </button>
+    <br /><br />
+    The Element is at the index: <b><span id="SearchOut2"></span></b>
+    <br /><br />
+    <hr />
+    <h3>Array delete operations</h3>
+    <h4>Using User-defined Logic</h4>
+    Enter the element to delete:
+    <input id="delEle1" placeholder="Element to Delete" />
+    <br /><br />
+    <button id="DelEleBut1" onclick="DelElement1()">Delete Element</button>
+    <br /><br />
+    The Array after deletion is: <b>[<span id="DelOut1">Empty Array</span>]</b>
+    <h4>Using In-built Logic</h4>
+    Enter the element to delete:
+    <input id="delEle2" placeholder="Element to Delete" />
+    <br /><br />
+    <button id="DelEleBut2" onclick="DelElement2()">Delete Element</button>
+    <br /><br />
+    The Array after deletion is: <b>[<span id="DelOut2">Empty Array</span>]</b>
+    <br /><br />
+
+    <hr />
+    <h3>Array Empty operations</h3>
+    <h4>Using User-defined Logic</h4>
+    <button id="EmptyBut1" onclick="empty1()">Empty Array</button>
+    <br /><br />
+    The Array after emptying is: <b>[<span id="emptyOut1"></span>]</b>
+    <h4>Using In-built Logic</h4>
+    <button id="EmptyBut2" onclick="empty2()">Empty Array</button>
+    <br /><br />
+    The Array after emptying is: <b>[<span id="emptyOut2"></span>]</b>
+    <br /><br />
+    <hr />
+    <button id="reset" onclick="window.location.reload()">reset</button>
+    <script>
+      const Arr = new Array();
+      function AddElement() {
+        let Element = document.getElementById("arrEle").value;
+        let len = document.getElementById("arrlen").value;
+        if (Arr.length >= len) {
+          alert("You are trying to Add more elements than the Array Length!");
+        } else {
+          Arr.push(Element);
+          document.getElementById("ArrOut").innerHTML = Arr.toString();
+        }
+      }
+      function SearchElement1() {
+        let Element = document.getElementById("searchEle1").value;
+        let len = document.getElementById("arrlen").value;
+        var flag = 0;
+        for (let i = 0; i < len; i++) {
+          if (Element == Arr[i]) {
+            document.getElementById("SearchOut1").innerHTML = i;
+            flag = 1;
+            break;
+          }
+        }
+        if (!flag) {
+          document.getElementById("SearchOut1").innerHTML = "Element Not Found";
+          alert("Element not found in the Array");
+        }
+      }
+
+      function SearchElement2() {
+        let Element = document.getElementById("searchEle2").value;
+        let len = document.getElementById("arrlen").value;
+        if (Arr.indexOf(Element) < 0) {
+          document.getElementById("SearchOut2").innerHTML = "Element Not Found";
+          alert("Element not found in the Array");
+        } else {
+          document.getElementById("SearchOut2").innerHTML =
+            Arr.indexOf(Element);
+        }
+      }
+      function DelElement1() {
+        const ArrTemp = new Array();
+        let Element = document.getElementById("delEle1").value;
+        let len = document.getElementById("arrlen").value;
+        for (let i = 0; i < len; i++) {
+          if (Arr[i] != Element) {
+            ArrTemp.push(Arr[i]);
+          }
+        }
+        document.getElementById("DelOut1").innerHTML = ArrTemp.toString();
+      }
+
+      function DelElement2() {
+        let Element = document.getElementById("delEle2").value;
+        let len = document.getElementById("arrlen").value;
+        if (Arr.indexOf(Element) < 0) {
+          alert("Element not found in the Array");
+        } else {
+          Arr.splice(Arr.indexOf(Element), 1);
+        }
+        document.getElementById("DelOut2").innerHTML = Arr.toString();
+      }
+      function empty1() {
+        let len = document.getElementById("arrlen").value;
+        for (let i = 0; i < len; i++) {
+          Arr.pop();
+        }
+        document.getElementById("emptyOut1").innerHTML = Arr.toString();
+      }
+      function empty2() {
+        let len = document.getElementById("arrlen").value;
+        Arr.splice(0, len);
+        document.getElementById("emptyOut1").innerHTML = Arr.toString();
+      }
+    </script>
+  </body>
+</html>

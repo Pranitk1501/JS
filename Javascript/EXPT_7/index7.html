@@ -1,0 +1,61 @@
+<!Concept of Arrays & array objects in JavaScript>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 7</title>
+    <style>
+        #tablestyle {
+            font-family: 'Times New Roman', Times, serif;
+            border-collapse: collapse;
+            width: 20%;
+        }
+        #tablestyle td, #tablestyle th {
+            border: 2px solid;
+            padding: 8px;
+            background-color: #C4A484;
+        }
+    </style>
+</head>
+<body id = "body" style = "text-align:center;">
+    <H5>42455 Pranit Kothawade</H5>
+    <H1>JavaScript Experiment 7</H1>
+    <hr>
+    Enter the Array to begin operations
+    <br><br>
+    <h3>Enter the Array</h3>
+    Enter the length of the array: 
+    <input id="arrlen" placeholder="Array Length">
+    <br><br>
+    Enter an Element and click add element: 
+    <input id="arrEle" placeholder="Array Element">
+    <br><br>
+    <button id = "AddElement" onclick = "AddElement()">Add Element</button>
+    <br><br>
+    The Array is now: <b><span id="ArrOut">Empty Array</span></b>
+    <br><br>
+    <hr>
+    <h3>Enter the Object</h3>
+    Enter the key-value pair of the object: 
+    <br><br>
+    Enter the key:
+    <input id="ObjKey" placeholder="Object Key">
+    <br><br>
+    Enter the value:
+    <input id="ObjVal" placeholder="Object Value">
+    <br><br>
+    <button id = "AddOBj" onclick = "AddObj()">Add Object</button>
+    <br><br>
+    <hr>
+    <h3>Check if Array elements are array</h3>
+    Click the button to generate the table
+    <button id = "checkArray" onclick = "checkArray()">Check Array</button>
+    <br><br>
+    <span id="TableOutput"></span>
+    <hr>
+    <button id = "reset" onclick = "window.location.reload()">reset</button>
+    <script src="Experiment_7.js"></script>
+</body>
+</html>

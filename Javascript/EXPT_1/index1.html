@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expt_01 Area</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input {
+            width: 100px;
+            padding: 5px;
+        }
+        button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        h4 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript program to calculate Area of</h1>
+        <h1>1. Triangle,</h1>
+        <h1>2. Rectangle</h1>
+        <h1>3. Circle.</h1>
+        <br>
+        <h1>42455 Pranit Kothawade</h1>
+    </div>
+    <div class="container">
+        <h2>Area of Rectangle</h2>
+        <div>
+            <div>
+                <input id="length" type="number">
+                <label>Enter length of rectangle</label>
+            </div>
+            <br>
+            <div>
+                <input id="breadth" type="number">
+                <label>Enter breadth of rectangle</label>
+            </div>
+            <br>
+            <div>
+                <button onclick="areaOfrectangle()">Calculate Area</button>
+                <h4 id="display2"></h4>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Area of Circle</h2>
+        <div>
+            <div>
+                <input id="Radius" type="number">
+                <label>Enter Radius of circle</label>
+            </div>
+            <br>
+            <div>
+                <button onclick="areaOfcircle()">Calculate Area</button>
+                <h4 id="display1"></h4>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Area of Triangle</h2>
+        <div>
+            <div>
+                <input id="side1" type="number" />
+                <label>Enter side 1 of the triangle</label>
+            </div>
+            <br>
+            <div>
+                <input id="side2" type="number" />
+                <label>Enter side 2 of the triangle</label>
+            </div>
+            <br>
+            <div>
+                <input id="side3" type="number" />
+                <label>Enter side 3 of the triangle</label>
+            </div>
+            <br>
+            <button onclick="areaOftriangle()">Calculate Area</button>
+            <h4 id="display"></h4>
+        </div>
+    </div>
+    <script src="assignment_1.js"></script>
+</body>
+</html>

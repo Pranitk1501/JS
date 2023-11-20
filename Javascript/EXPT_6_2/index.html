@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Manipulation</title>
+  </head>
+  <body>
+    <h1>Array Manipulation</h1>
+    <hr />
+    <h2>Enter Array Elements</h2>
+    <label for="arr-length">Array Length:</label>
+    <input type="number" id="arr-length" placeholder="Enter Array Length" />
+    <br /><br />
+    <label for="arr-element">Add Element:</label>
+    <input type="text" id="arr-element" placeholder="Enter Element" />
+    <br /><br />
+    <button id="add-element">Add Element</button>
+    <br /><br />
+    <p>Current Array: <b>[<span id="array-output">Empty Array</span>]</b></p>
+    <hr />
+    <h2>Search in Array</h2>
+    <label for="search-element-ud">Search Element (User-defined Logic):</label>
+    <input type="text" id="search-element-ud" placeholder="Element to Search" />
+    <br /><br />
+    <button id="search-element-ud-btn">Search Element</button>
+    <br /><br />
+    <p>Element Index: <b><span id="search-element-ud-output"></span></b></p>
+    <br /><br />
+    <label for="search-element-built">Search Element (Built-in Logic):</label>
+    <input type="text" id="search-element-built" placeholder="Element to Search" />
+    <br /><br />
+    <button id="search-element-built-btn">Search Element</button>
+    <br /><br />
+    <p>Element Index: <b><span id="search-element-built-output"></span></b></p>
+    <hr />
+    <h2>Delete from Array</h2>
+    <label for="delete-element-ud">Delete Element (User-defined Logic):</label>
+    <input type="text" id="delete-element-ud" placeholder="Element to Delete" />
+    <br /><br />
+    <button id="delete-element-ud-btn">Delete Element</button>
+    <br /><br />
+    <p>Array after Deletion: <b>[<span id="delEle1">Empty Array</span>]</b></p>
+    <br /><br />
+    <label for="delete-element-built">Delete Element (Built-in Logic):</label>
+    <input type="text" id="delete-element-built" placeholder="Element to Delete" />
+    <br /><br />
+    <button id="delete-element-built-btn">Delete Element</button>
+    <br /><br />
+    <p>Array after Deletion: <b>[<span id="delEle2">Empty Array</span>]</b></p>
+    <hr />
+    <h2>Empty Array</h2>
+    <button id="empty-array-ud-btn">Empty Array (User-defined Logic)</button>
+    <br /><br />
+    <p>Array after Emptying: <b>[<span id="empty-array-ud-output"></span>]</b></p>
+    <br /><br />
+    <button id="empty-array-built-btn">Empty Array (Built-in Logic)</button>
+    <br /><br />
+    <p>Array after Emptying: <b>[<span id="empty-array-built-output"></span>]</b></p>
+    <hr />
+    <button id="reset">Reset</button>
+    <script src="script.js"></script>
+  </body>
+</html>

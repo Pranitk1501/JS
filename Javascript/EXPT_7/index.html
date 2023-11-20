@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Array Operations</title>
+    <style>
+        body {
+            background: #ffffff;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Name: Pranit Kothawade <br> Roll no: 42455</h3>
+    <h4>Exp no. 7: Array Operations </h4>
+    <br><br>
+    <form class="" method="post">
+        <button type="button" name="button" onclick="lengthh()">Submit Array Length</button>
+        <input type="text" id='1' value="" /> <br><br>
+        <button type="button" name="button" onclick="Append()">Enter element to append</button>
+        <input type="text" id='2' value="" /> <br><br>
+        <!-- <button type="button" name="button" onclick="Pop()">Pop Array Element from end</button><br><br> -->
+        <!-- <button type="button" name="button" onclick="Shift()">Dequeue Array Element from front</button><br><br> -->
+        <!-- <button type="button" name="button" onclick="Unshift()">Enter element to add to the front</button> -->
+        <!-- <input type="text" id='3' value="" /> <br><br> -->
+        <button type="button" name="button" onclick="IsArray()">Is it an Array?</button><br><br>
+        Result : <span id="res"></span><br><br>
+        <button type="button" name="button" onclick="Empty()">Empty Array</button>
+        <button type="button" name="button" onclick="Display()">Display Array</button><br><br>
+    </form>
+    <script>
+        var arr;
+        var n;
+
+        function lengthh() {
+            n = parseInt(document.getElementById('1').value);
+            arr = [];
+            var str = "You have entered length: " + n;
+            document.getElementById("res").innerHTML = str;
+        }
+
+        function Append() {
+            let arrval = document.getElementById('2').value;
+            if (arr.length < n) {
+                arr.push(arrval);
+                var str = "You have entered: " + arr;
+                document.getElementById("res").innerHTML = str;
+            } else {
+                document.getElementById("res").innerHTML = "Array full";
+            }
+        }
+
+        function Pop() {
+            if (arr.length !== 0) {
+                var num = arr.pop();
+                var str = "You have popped: " + num;
+                document.getElementById("res").innerHTML = str;
+            } else {
+                document.getElementById("res").innerHTML = "Array Empty";
+            }
+        }
+
+        function Shift() {
+            if (arr.length !== 0) {
+                var num = arr.shift();
+                var str = "You have removed: " + num;
+                document.getElementById("res").innerHTML = str;
+            } else {
+                document.getElementById("res").innerHTML = "Array Empty";
+            }
+        }
+
+        function Unshift() {
+            let arrval = document.getElementById('3').value;
+            if (arr.length < n) {
+                arr.unshift(arrval);
+                var str = "You have entered: " + arr;
+                document.getElementById("res").innerHTML = str;
+            } else {
+                document.getElementById("res").innerHTML = "Array full";
+            }
+        }
+
+        function IsArray() {
+            let checkarr = Array.isArray(arr);
+            document.getElementById("res").innerHTML = checkarr;
+        }
+
+        function Empty() {
+            arr = [];
+            document.getElementById("res").innerHTML = "Array is Emptied";
+        }
+
+        function Display() {
+            var str = "You have entered: " + arr;
+            document.getElementById("res").innerHTML = str;
+        }
+    </script>
+</body>
+
+</html>
